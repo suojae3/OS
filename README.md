@@ -27,7 +27,7 @@
 
 ### 02. 운영체제의 목적은 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 1.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 1.png" width="400" height="200">
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 2.png" width="400" height="200"><br/><br/>
 
@@ -89,7 +89,7 @@
 
 ### 08. 가상메모리란 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 8.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 8.png" width="400" height="200">
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 9.png" width="400" height="200"><br/><br/>
 
