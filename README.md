@@ -1,5 +1,5 @@
 
-![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Operating%20System&fontSize=60&animation=fadeIn&fontAlign=19&fontAlignY=40)
+![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Operating%20System&fontSize=60&animation=fadeIn&fontAlign=32&fontAlignY=40)
 
 
 ---
