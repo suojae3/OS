@@ -1,4 +1,4 @@
-
+<img width="449" alt="image" src="https://github.com/suojae3/OS/assets/126137760/e87bdc83-bd20-40ae-bc94-1ae9db76eaba">
 ![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Operating%20System&fontSize=60&animation=fadeIn&fontAlign=32&fontAlignY=40)
 
 
@@ -344,7 +344,7 @@
 
 #### 1. 커널과 Virtual 메모리 주소 공간은 어떻게 구성되어 있나요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src=pic/29.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/29.png" width="400" height="200"><br/><br/>
 
 - virtual memory 또한  code / data / stack 공간을 보유하고 있습니다
 - 커널은 일종의 프로세스로서 code / data / stack 공간을 보유하고 있습니다
@@ -357,9 +357,61 @@
 #### 2. 사용자 프로그램이 사용하는 함수는 어떤 종류로 나뉘나요?
 
 - 사용자 프로그램이 사용하는 함수는 사용자 정의 함수, 라이브러리 함수, 커널 함수 3가지 입니다.
+- 사용자 정의 함수는 자신의 프로그램에서 정의한 함수(ex. 개발자가 정의한 함수)입니다.
+- 라이브러리 함수는 외부에서 가져다 쓴 함수로 자신의 프로그램 실행파일에 포함되어 있습니다
+- 커널함수는 운영체제 프로그램의 함수로 시스템 콜이 동작하는 함수입니다.
+
+#
+
+#### 3. 한 프로그램의 실행 과정을 설명해주세요
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/30.png" width="400" height="200"><br/><br/>
+
+- 함수의 종류에 따라 거쳐가는 주소공간이 다릅니다.
+- 사용자 정의 함수와 라이브러리 함수는 사용자 프로그램 주소공간의 코드가 user mode에서 실행됩니다
+- 반면에 시스템 콜이 불리면 운영체제에게 넘어가 kernel 주소공간의 커널함수가 실행됩니다.
+- 즉 프로그램이 실행된다는 것은 사용자 프로그램 주소공간의 사용자저정의/라이브러리 함수 -> 시스템콜 -> 커널공간의 커널함수 -> ,,, 반복하다 프로그램이 끝나는 것입니다.
+
+#
+
+#### 4. 프로세스의 문맥(Context)란 무엇인가요?
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/31.png" width="400" height="200"><br/><br/>
+
+- 프로세스란 실행중인 프로그램을 말합니다 "Process is a program in execution"
+- 프로세스가 진행되면서 현재 어떤 상태에 있느냐가 바로 프로세스의 문맥(Context)입니다. 따라서 Context는 시간에 따라 바뀌는 개념입니다.
+- 현재를 놓고 봤을 때 이 프로세스는 CPU를 얼마나 쓰고있느냐, 메모리를 얼마나 가지고 있느냐, 어디함수를 실행하고 있는가 이런 종합된 정보가 프로세스의 Context 입니다.
+- CPU에서 현재 상테에 PC는 어딜 가리키고 레지스터에는 어떤 값을 넣고 있었느냐와 같은 정보를 하드웨어 문맥이라고 부릅니다
+
+#
+
+#### 5. Running, Ready, Blocked(wait, sleep) 상태에 있다는 말은 어떤 뜻인가요?
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/32.png" width="400" height="200"><br/><br/>
+
+- CPU가 작업하고 있는 프로세스를 일컬어 Running상태에 있다고 부릅니다 (CPU를 잡고있는 프로세스)
+- CPU를 쓰고싶지만 기다리고 있는 프로세스들을 Ready 상태에 있다고 부릅니다
+- CPU를 줘봤자 실행하지 못하는, 오래걸리는 작업(I/O 작업등) 때문에 CPU를 얻어봤자 무의미한 프로세스를 Blocked 상태에 있다고 부릅니다.
+- 프로세스는 언제나 위 3가지 상태중 하나에 놓이게 됩니다.
+
+#
+
+#### 6. 프로세스 상태(state)에 대해 설명해주세요
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/33.png" width="400" height="200"><br/><br/>
+
+- 프로세스의 상태는 Ready, Running, Waiting 3가지가 있습니다.
+- ready상태에 있는 프로세스는 CPU만 준다면 바로 실행됩니다.
+- 앞선 프로세스가 CPU를 내주는 경우는 3가지입니다 -> timer interrupt, I/O 작업등으로 인한 Blocked 진입, exit(종료될 때) 
+- 이때 주의할 점은 프로세스가 종료되면 더이상 프로세스가 아닙니다. terminated는 프로세스 종료전 무언가 뒷처리가 남은 상태입니다
+
+# 
+
+#### 7. Process Control Block(PCB)에 대해 설명해주세요
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/34.png" width="400" height="200"><br/><br/>
+
 - 
-
-
 
 
 
