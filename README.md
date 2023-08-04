@@ -1,4 +1,4 @@
-<img width="449" alt="image" src="https://github.com/suojae3/OS/assets/126137760/e87bdc83-bd20-40ae-bc94-1ae9db76eaba">
+
 ![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Operating%20System&fontSize=60&animation=fadeIn&fontAlign=32&fontAlignY=40)
 
 
