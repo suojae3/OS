@@ -22,7 +22,7 @@
 
 ### 01. 운영체제란 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled.png" width="400" height="200"><br/>
 
 - 운영체제란 컴퓨터 하드웨어 바로 위에 설치되어 사용자 및 다른 소프트웨어와 하드웨어를 연결하는 소프트웨어 계층입니다<br/><br/>
 
