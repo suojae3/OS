@@ -22,7 +22,7 @@
 
 ### 01. 운영체제란 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/Untitled.png" width="400" height="200"><br/><br/>
 
 - 운영체제란 컴퓨터 하드웨어 바로 위에 설치되어 사용자 및 다른 소프트웨어와 하드웨어를 연결하는 소프트웨어 계층입니다<br/><br/>
 
@@ -30,9 +30,9 @@
 
 ### 02. 운영체제의 목적은 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 1.png" width="400" height="200">
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/Untitled 1.png" width="400" height="200">
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 2.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/Untitled 2.png" width="400" height="200"><br/><br/>
 
 - 컴퓨터 하드웨어를 직접적으로 다루면 매우 어렵고 복잡하기 때문에 운영체제라는 중간다리를 만듦으로서 컴퓨터 시스템을 편리하게 사용할 수 있는 환경을 제공합니다
 - 또한 운영체제는 실행중인 프로그램을 메모리 공간에 적절히 분배함으로서 컴퓨터 시스템의 자원을 효율적으로 관리합니다<br/><br/>
@@ -411,7 +411,18 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/34.png" width="400" height="200"><br/><br/>
 
-- 
+- 각각의 프로세스마다
+
+#
+
+#### 8. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/35.png" width="400" height="200"><br/><br/>
+
+
+- 프로세스 A에서 프로세스 B로 넘어가는 과정을 말합니다
+- 즉 CPU를 한 프로세스에서 다른 프로세스로 넘겨주는 과정입니다.
+- 운영체제는 이러한 문맥교환 과정에서 기존 프로세스 상태를 PCB에 저장하고, 새롭게 불러들이는 프로세스의 상태를 PCB로부터 읽어옵니다
 
 
 
