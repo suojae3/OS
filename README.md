@@ -32,7 +32,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 1.png" width="400" height="200">
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 2.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 2.png" width="400" height="200"><br/>
 
 - 컴퓨터 하드웨어를 직접적으로 다루면 매우 어렵고 복잡하기 때문에 운영체제라는 중간다리를 만듦으로서 컴퓨터 시스템을 편리하게 사용할 수 있는 환경을 제공합니다
 - 또한 운영체제는 실행중인 프로그램을 메모리 공간에 적절히 분배함으로서 컴퓨터 시스템의 자원을 효율적으로 관리합니다<br/><br/>
@@ -41,7 +41,7 @@
 
 ### 03. CPU 스케줄링이란 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 3.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 3.png" width="400" height="200"><br/>
 
 - CPU 스케쥴링이란 어떤 프로그램에게 CPU 사용권을 줄지에 대한 과정입니다
 - CPU는 하드웨어라 생각을 못합니다 그냥 코드를 읽어와서 계산만 수행합니다
@@ -52,7 +52,7 @@
 
 ### 04. 디스크 스케줄링이란 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 4.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 4.png" width="400" height="200"><br/>
 
 - 디스크는 CPU에 비해 백만배정도 느립니다
 - 메모리는 CPU에 비해 백배정도 느립니다
@@ -65,7 +65,7 @@
 
 ### 05.  CPU 스케쥴링이란 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 5.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 5.png" width="400" height="200"><br/>
 
 - CPU 스케쥴링이란 운영체제의 중요한 역할 중 하나로 어떤 프로그램에게 CPU 사용권을 줄건지 순서를 매기는 것과 같습니다<br/><br/>
 
@@ -83,7 +83,7 @@
 
 ### 07. Round Robin(RR) 에 대해 설명해주세요
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 7.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 7.png" width="400" height="200"><br/>
 
 - Round Robin은 CPU 스케쥴링의 방법들 중 하나로 CPU할당시간을 딱 정해서 각 프로세스들이 할당시간만큼만 돌아가면서 사용하고 작업을 완료했으면 I/o로 보내는 방법입니다
 - 이 방법의 장점은 CPU를 효율적으로 사용하면서 starvation을 방지할 수 있다는 것입니다<br/><br/>
@@ -94,7 +94,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 8.png" width="400" height="200">
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 9.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 9.png" width="400" height="200"><br/>
 
 - 프로그램을 실행하게 되면 디스크의 실행파일들이 메모리(휘발성)로 이동한뒤 프로세스가 되어 실행됩니다
 - 하지만 좀 더 세부적으로 따지면 바로 메모리에 올라가는 것이 아닌 중간에 가상메모리라는 단계를 거치게 됩니다.
@@ -112,7 +112,7 @@
 
 ### 10. 메모리가 꽉찼을 경우 또다른 작업을 요청받았을 때 OS는 어떻게 동작하나요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 10.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 10.png" width="400" height="200"><br/>
 
 - 미래에 재사용될 가능성이 높은 작업은 후순위로 재사용 가능성이 낮은 작업을 먼저 메모리에서 지웁니다
 - 이때 재사용 가능성에 대한 판단은 LRU와 LFU 방식을 사용합니다
@@ -123,7 +123,7 @@
 
 ### 11.  디스크 스케쥴링은 어떻게 동작하나요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 11.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 11.png" width="400" height="200"><br/>
 
 - CPU를 쓰고나서 디스크로부터 파일을 읽어야하거나 저장을 해야하면 작업들이 디스크 큐에 쌓이게 됩니다.
 - 디스크 접근시간 중 가장 많은 부분을 차지하는 것이 디스크 헤드 이동시간(seek time)입니다. 따라서 디스크 헤드 이동을 얼마나 최소화하느냐가 중요합니다
@@ -133,7 +133,7 @@
 
 ### 12. 디스크 접근 시간 구성에 대해 좀 더 자세히 설명해주세요
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 12.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 12.png" width="400" height="200"><br/>
 
 - 디스크 접근시간 (Access time)은 탐색시간(Seek time), 회전지연(Rotational latency), 전송 시간(Transfer time)으로 구성되어 있습니다
 - 이러한 3가지요소중 Seektime(헤드 이동)시간이 가장 오래걸리기 때문이 이를 최소화 시키는 것이 목표입니다<br/><br/>
@@ -142,7 +142,7 @@
 
 ### 13. Seektime 최소화를 목표에 둘 경우 어떤 문제점이 발생하나요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 13.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 13.png" width="400" height="200"><br/>
 
 - 앞서 봤던 CPU 스케쥴링에서처럼 Starvation문제가 발생할 수 있습니다
 - 즉 탐색시간이 긴 작업의 경우 지나치게 뒤늦게 처리될 수 있습니다<br/><br/>
@@ -151,7 +151,7 @@
 
 ### 14. 디스크 스케줄링에서 SCAN에 대해 설명해주세요
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 14.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 14.png" width="400" height="200"><br/>
 
 - 이전의 탐색시간 최소화를 최우선했을 경우의 starvation의 문제를 보완하기 위해 SCAN이라는 디스크 스케쥴링 방법이 현재 가장 근본적으로 사용되고 있습니다
 - 헤드가 순차적으로 한쪽 끝에서 다른쪽 끝으로 이동하며 가는 길목에 있는 요청들을 처리하는 방식으로 형평성과 효율성을 모두 잡을 수 있는 방법입니다<br/><br/>
@@ -160,7 +160,7 @@
 
 ### 15. 빠른 CPU와 느린 I/O 장치들의 속도를 어떻게 완충시키나요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 15.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 15.png" width="400" height="200"><br/>
 
 - CPU(최상단)와 I/O(최하단) 사이에는 다음과 같은 계층 구조가 있습니다
 - 저장장치 계층구조의 특징은 최상단일 수록 빠르지만 값이 비싸서 적은 양의 작업만 처리하는 반면 하단일 수록 느리지만 많은 양의 작업을 가질 수 있습니다
@@ -173,7 +173,7 @@
 
 ### 16. 플래시 메모리란 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 16.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 16.png" width="400" height="200"><br/>
 
 - 플래시 메모리는 반도체 장치로 하드디스크의 역할을 수행합니다
 - 하지만 하드디스크에 비해 크기가 작고, 전력소모가 적으며, 물리적인 충격에 더 강합니다. 이러한 특징은 모바일 장치에 매우 적합합니다
@@ -191,7 +191,7 @@
 
 #### 01. 운영체제에 대해서 범위에 따라 설명해주세요
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="17.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="17.png" width="400" height="200"><br/>
 
 - 협의(좁은의미)의 운영체제는 커널을 뜻합니다. 커널은 운영체제의 핵심부분으로 메모리에 상주하고 있습니다
 - 광의(넓은의미)의 운영체제는 커널(메모리 상주 o) 뿐 아니라 각종 주변 시스템 유틸리티(메모리 상주 x)를 포함한 개념입니다
@@ -214,7 +214,7 @@
 #### 03. 컴퓨터 시스템에서 mode bit이 하는 역할은 무엇인가요? 
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="18.png" width="400" height="200">
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="19.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="19.png" width="400" height="200"><br/>
 
 
 
@@ -227,7 +227,7 @@
 
 #### 04. 컴퓨터 시스템에서 intterupt line 이 하는 일은 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="20.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="20.png" width="400" height="200"><br/>
 
 - CPU 에서 기계어를 실행시키기에 앞서 interrupt 유무를 확인하는 역할을 합니다
 - interrupt line 에서 interrupt 이 확인되면 자동적으로 CPU 권한은 운영체제에게 넘어갑니다 (= mode bit이 0이 됩니다)
@@ -237,7 +237,7 @@
 
 #### 05. PC(Program Counter) Register 의 역할은 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="21.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="21.png" width="400" height="200"><br/>
 
 - PC Register는 다음번에 CPU에서 실행할 프로그램의 메모리 주소를 가리키고 있는 역할을 합니다.
 
@@ -245,7 +245,7 @@
 
 #### 06. timer 의 역할은 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="18.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="18.png" width="400" height="200"><br/>
 
 - 다른 프로그램이 실행 중일 때 운영체제는 함부로 CPU 권한을 가져올 수 없습니다
 - 만약 프로그램이 무한루프를 돌면서 CPU를 돌려주지 않는다면 매우 골치아파집니다. 이를 방지하기 위해 timer가 있습니다
@@ -256,7 +256,7 @@
 
 #### 07. System Call 이란 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="22.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="22.png" width="400" height="200"><br/>
 
 - I/O 장치에 대한 명령어는 모두 특권명령으로 묶여있습니다. 따라서 사용자 프로그램이 특권명령으로 묶인 명령을 실행할 수 없습니다.
 - 따라서 I/O장치에 명령을 내릴려면 운영체제의 도움을 받아야합니다. 이를 위해 CPU를 점유하고 있던 사용자 프로그램이 스스로 interrupt를 겁니다. 이것을 바로 system call이라고 부릅니다
@@ -266,7 +266,7 @@
 
 #### 08. Trap 이란 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="23.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="23.png" width="400" height="200"><br/>
 
 - 인터럽트에는 하드웨어에서 발생시키는 인터럽트(일반적 - Timer, Disk controller ...)와 소프트웨어에서 발생시키는 인터럽트가 있습니다. 이때 후자의 경우를 따로 **trap**이라 부르기도 합니다
 - Trap의 예로는 개별 프로그램이 kernel의 도움을 받기위해 스스로 interrupt 시키는 system call 이 있습니다.(interrupt의 출발지가 소프트웨어)
@@ -275,7 +275,7 @@
 
 #### 09. I/O 이 동작하는 순서를 알려주세요
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="18.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="18.png" width="400" height="200"><br/>
 
 - 먼저 OS가 I/O 작업이 들어가있는 사용자 프로그램에게 CPU를 줍니다
 - 사용자 프로그램은 I/O 작업이 수행될 때 스스로 interrupt를 걸어 커널에게 시스템 콜을 날립니다
@@ -294,7 +294,7 @@
 
 #### 11. 동기식 입출력 (synschronous I/O)과 비동기식 입출력 (asynschronous I/O) 에 대해서 설명해주세요
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="24.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="24.png" width="400" height="200"><br/>
 
 - 동기식: I/O 입출력시 시스템 콜을 한 후 입출력 작업이 완료된 이후에야 커널이 사용자 프로그램에게 CPU를 넘기는 방법입니다
 - I/O 가 완료될 때 가지 OS가 CPU를 점유하게 됩니다
@@ -307,7 +307,7 @@
 #### 12. DMA(direct memory access) Controller 란 무엇인가요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="25.png" width="400" height="200">
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="26.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="26.png" width="400" height="200"><br/>
 
 - Interrupt도 일종의 오버헤드입니다. 특히 고속 I/O 장치의 경우 인터럽트가 너무 자주 발생해 성능저하 문제를 일으킬 수 있습니다
 - 이를 방지하기 위해 DMA가 디바이스 버퍼에 저장되어 있던 I/O 값을 직접 메모리에 블록단위로 복사해서 저장합니다.  
@@ -317,7 +317,7 @@
 
 #### 13. I/O를 수행하는 기계어 2가지에 대해 설명해주세요
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="27.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="27.png" width="400" height="200"><br/>
 
 - CPU에서 I/O 작업을 요청하는 기계어를 실행할 때 메모리 주소와 디바이스 주소를 따로 나누어 접근하는 방식이 있고 아예 디바이스를 메모리 주소로 넣어 메모리 주소로만 접근하는 방식이 있습니다
 - 후자의 경우를 Memory Mapped I/O 라고 합니다 
@@ -326,7 +326,7 @@
 
 #### 14. Caching 이란 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="28.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="28.png" width="400" height="200"><br/>
 
 - 저장장치 계층 구조에서 원본 데이터는 항상 하위 계층에 있고 상위 계층에서는 필요한 정보만 뽑아쓰는 방식입니다.
 - 하지만 언제나 정보를 아래에서 위까지 계속 끌어다 쓰면 오버헤드 문제가 있기 때문에 자주 사용할 정보는 상위 계층에 공간을 따로 만들어 저장해서 재사용할 경우 하위 계층까지 내려가지 않고 바로 가져다 씁니다. 
@@ -344,7 +344,7 @@
 
 #### 1. 커널과 Virtual 메모리 주소 공간은 어떻게 구성되어 있나요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/29.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/29.png" width="400" height="200"><br/>
 
 - virtual memory 또한  code / data / stack 공간을 보유하고 있습니다
 - 커널은 일종의 프로세스로서 code / data / stack 공간을 보유하고 있습니다
@@ -365,7 +365,7 @@
 
 #### 3. 한 프로그램의 실행 과정을 설명해주세요
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/30.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/30.png" width="400" height="200"><br/>
 
 - 함수의 종류에 따라 거쳐가는 주소공간이 다릅니다.
 - 사용자 정의 함수와 라이브러리 함수는 사용자 프로그램 주소공간의 코드가 user mode에서 실행됩니다
@@ -376,7 +376,7 @@
 
 #### 4. 프로세스의 문맥(Context)란 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/31.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/31.png" width="400" height="200"><br/>
 
 - 프로세스란 실행중인 프로그램을 말합니다 "Process is a program in execution"
 - 프로세스가 진행되면서 현재 어떤 상태에 있느냐가 바로 프로세스의 문맥(Context)입니다. 따라서 Context는 시간에 따라 바뀌는 개념입니다.
@@ -387,7 +387,7 @@
 
 #### 5. Running, Ready, Blocked(wait, sleep) 상태에 있다는 말은 어떤 뜻인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/32.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/32.png" width="400" height="200"><br/>
 
 - CPU가 작업하고 있는 프로세스를 일컬어 Running상태에 있다고 부릅니다 (CPU를 잡고있는 프로세스)
 - CPU를 쓰고싶지만 기다리고 있는 프로세스들을 Ready 상태에 있다고 부릅니다
@@ -398,7 +398,7 @@
 
 #### 6. 프로세스 상태(state)에 대해 설명해주세요
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/33.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/33.png" width="400" height="200"><br/>
 
 - 프로세스의 상태는 Ready, Running, Waiting 3가지가 있습니다.
 - ready상태에 있는 프로세스는 CPU만 준다면 바로 실행됩니다.(프로세스가 이미 메모리에 올라와있는등 다른 조건 만족한 상태)
@@ -411,7 +411,7 @@
 
 #### 7. Process Control Block(PCB)에 대해 설명해주세요
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/34.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/34.png" width="400" height="200"><br/>
 
 - 운영체제가 각 프로세스를 관리하기 위해 프로세스당 유지하는 정보를 말합니다.
 - CPU를 프로세스들이 일정시간 점유하고 빠질 때 상태정보를 PCB에다 저장함으로써 나중에 다시 CPU를 점유할 때 PCB에 저장된 상태부터 계산을 시작합니다
@@ -420,7 +420,7 @@
 
 #### 7. 문맥교환(Context SwitCh)이란 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/35.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/35.png" width="400" height="200"><br/>
 
 
 - 프로세스 A에서 프로세스 B로 넘어가는 과정을 말합니다
@@ -431,7 +431,7 @@
 
 #### 8. system call이나 interrupt 발생시 항상 Context Switch가 일어나나요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/36.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/36.png" width="400" height="200"><br/>
 
 - 항상 문맥교환이 일어나는 것은 아닙니다. 사용자 프로세스가 바뀌지 않는다면 문맥교환없이 User mode로 복귀하게 됩니다.
 - 문맥교환이 없는 경우에도 context의 일부를 PCB에 저장하지만 문맥교환 하는 경우의 부담보다 훨씬 적다고 볼 수 있습니다.
@@ -457,7 +457,7 @@
 
 #### 11. 디스크 I/O의 interrupt는 하드웨어 interrupt입니까? 소프트웨어 interrupt입니까?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/37.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/37.png" width="400" height="200"><br/>
 
 - 둘 모두 해당합니다.
 - 프로세스가 CPU에서 Running 도중에 디스크 I/O 작업이 생긴다면 운영체제에게 요청합니다
@@ -468,7 +468,7 @@
 
 #### 12. Thread 란 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/38.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/38.png" width="400" height="200"><br/>
 
 - 프로세스 단위로 작업할 경우 프로세스의 주소공간(Code/Data/Stack)이 작업마다 만들어지고 동일한 프로세스의 프로그램(웹브라우저를 여러개 실행시킨다던지)을 실행시키면 앞선 주소공간을 중복해서 사용하는 문제점이 발생합니다. 또한 Context Switch도 오버헤드가 크기 때문에 최대한 줄여야합니다.
 - 이를 효율적으로 처리하기 위해 하나의 프로세스 작업 안에서 CPU 작업 수행 단위인 Thread를 이용하게 되었습니다
@@ -495,7 +495,7 @@
 
 #### 15. Kernel thread 에 대해 설명해주세요
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/39.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/39.png" width="400" height="200"><br/>
 
 - thread는 프로세스 내에서의 작업단위이지만 이러한 프로세스를 운영체제에서 알고 있는 경우가 있습니다. 이를 Kernel Thread라고 부릅니다. 
 - 운영체제가 thread를 모르는 경우에는 User thread라고 부릅니다. 이러한 User thread는 프로세스 포장지에 잘 포장되어 운영체제가 직접 접근할 수 없습니다.
