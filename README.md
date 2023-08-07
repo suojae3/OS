@@ -22,7 +22,7 @@
 
 ### 01. 운영체제란 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/Untitled.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled.png" width="400" height="200"><br/><br/>
 
 - 운영체제란 컴퓨터 하드웨어 바로 위에 설치되어 사용자 및 다른 소프트웨어와 하드웨어를 연결하는 소프트웨어 계층입니다<br/><br/>
 
@@ -30,9 +30,9 @@
 
 ### 02. 운영체제의 목적은 무엇인가요?
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/Untitled 1.png" width="400" height="200">
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 1.png" width="400" height="200">
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/Untitled 2.png" width="400" height="200"><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="Untitled 2.png" width="400" height="200"><br/><br/>
 
 - 컴퓨터 하드웨어를 직접적으로 다루면 매우 어렵고 복잡하기 때문에 운영체제라는 중간다리를 만듦으로서 컴퓨터 시스템을 편리하게 사용할 수 있는 환경을 제공합니다
 - 또한 운영체제는 실행중인 프로그램을 메모리 공간에 적절히 분배함으로서 컴퓨터 시스템의 자원을 효율적으로 관리합니다<br/><br/>
@@ -401,9 +401,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/33.png" width="400" height="200"><br/><br/>
 
 - 프로세스의 상태는 Ready, Running, Waiting 3가지가 있습니다.
-- ready상태에 있는 프로세스는 CPU만 준다면 바로 실행됩니다.
+- ready상태에 있는 프로세스는 CPU만 준다면 바로 실행됩니다.(프로세스가 이미 메모리에 올라와있는등 다른 조건 만족한 상태)
 - 앞선 프로세스가 CPU를 내주는 경우는 3가지입니다 -> timer interrupt, I/O 작업등으로 인한 Blocked 진입, exit(종료될 때) 
 - 이때 주의할 점은 프로세스가 종료되면 더이상 프로세스가 아닙니다. terminated는 프로세스 종료전 무언가 뒷처리가 남은 상태입니다
+- Running은 CPU를 점유하고 명령어들을 수행중인 상태입니다
+- Blocked(Wait, Sleep)상태는 I/O등의 이벤트를 (스스로)기다리는 상태입니다
 
 # 
 
@@ -411,11 +413,12 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/34.png" width="400" height="200"><br/><br/>
 
-- 각각의 프로세스마다
+- 운영체제가 각 프로세스를 관리하기 위해 프로세스당 유지하는 정보를 말합니다.
+- CPU를 프로세스들이 일정시간 점유하고 빠질 때 상태정보를 PCB에다 저장함으로써 나중에 다시 CPU를 점유할 때 PCB에 저장된 상태부터 계산을 시작합니다
 
 #
 
-#### 8. 
+#### 7. 문맥교환(Context SwitCh)이란 무엇인가요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/35.png" width="400" height="200"><br/><br/>
 
@@ -423,6 +426,72 @@
 - 프로세스 A에서 프로세스 B로 넘어가는 과정을 말합니다
 - 즉 CPU를 한 프로세스에서 다른 프로세스로 넘겨주는 과정입니다.
 - 운영체제는 이러한 문맥교환 과정에서 기존 프로세스 상태를 PCB에 저장하고, 새롭게 불러들이는 프로세스의 상태를 PCB로부터 읽어옵니다
+
+#
+
+#### 8. system call이나 interrupt 발생시 항상 Context Switch가 일어나나요?
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/36.png" width="400" height="200"><br/><br/>
+
+- 항상 문맥교환이 일어나는 것은 아닙니다. 사용자 프로세스가 바뀌지 않는다면 문맥교환없이 User mode로 복귀하게 됩니다.
+- 문맥교환이 없는 경우에도 context의 일부를 PCB에 저장하지만 문맥교환 하는 경우의 부담보다 훨씬 적다고 볼 수 있습니다.
+
+#
+
+#### 9. 스케줄러(Scheduler)에 대해서 설명해주세요
+
+- 스케쥴러에는 3가지 종류가 있습니다 (장기 스케쥴러 / 단기 스케쥴러 / 중기 스케쥴러)
+- 장기 스케쥴러는 프로세스 중 어떤 것들을 ready queue로 보낼지 결정합니다. 즉 프로세스에 memory를 주는 문제를 관리합니다. 하지만 time sharing system(요즘 쓰이는 리눅스 윈도우 등등)들은 장기 스케쥴러가 없이 이미 프로세스가 메모리에 올라온채로 시작합니다.
+- 단기 스케쥴러는 timer interrupt가 걸릴 때마다 호출되는 스케쥴러로 어떤 프로세스를 다음번에 running시킬지 결정합니다. 즉 프로세스에 CPU를 주는 문제를 관리합니다
+- time sharing systme은 장기 스케쥴러를 안쓰는 대신 중기스케쥴러를 사용하게 됩니다. Swapper라고도 불리는 이 녀석은 여유 공간 마련을 위해 프로세스를 통째로 메모리에서 디스크로 쫒아냅니다. 즉 프로세스에게서 메모리를 뺏는 역할을 합니다.
+- 정리하자면 장기 스케쥴러는 프로세스에게 메모리를 주는 문제, 중기 스케쥴러는 프로세스로부터 메모리를 뺏는 문제를 담당합니다
+
+#
+
+#### 10. 프로세스의 상태중 Blocked 와 Suspended 의 차이를 알려주세요
+
+- 둘 모두 CPU를 얻을 수 없는 프로세스 상태입니다.
+- 하지만 Blocked는 내부적인 이유(I/O등의 이벤트 기다림)로, Suspended의 경우 외부적인 이유(메모리 공간 부족으로 프로세스를 디스크로 쫒아냄)로 프로세스 수행이 정지된 상태입니다.
+
+#
+
+#### 11. 디스크 I/O의 interrupt는 하드웨어 interrupt입니까? 소프트웨어 interrupt입니까?
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/37.png" width="400" height="200"><br/><br/>
+
+- 둘 모두 해당합니다.
+- 프로세스가 CPU에서 Running 도중에 디스크 I/O 작업이 생긴다면 운영체제에게 요청합니다
+- 운영체제는 디스크 컨트롤러에게 I/O작업을 요청합니다. -> 여기까지 system call -> 소프트웨어 interrupt
+- I/O 작업이 다 끝나면 디스크 컨트롤러가 I/O작업이 다 끝났다고 interrupt를 겁니다 -> 하드웨어 interrupt
+
+  #
+
+#### 12. Thread 란 무엇인가요?
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/38.png" width="400" height="200"><br/><br/>
+
+- 프로세스 단위로 작업할 경우 프로세스의 주소공간(Code/Data/Stack)이 작업마다 만들어지고 동일한 프로세스의 프로그램(웹브라우저를 여러개 실행시킨다던지)을 실행시키면 앞선 주소공간을 중복해서 사용하는 문제점이 발생합니다. 또한 Context Switch도 오버헤드가 크기 때문에 최대한 줄여야합니다.
+- 이를 효율적으로 처리하기 위해 하나의 프로세스 작업 안에서 CPU 작업 수행 단위인 Thread를 이용하게 되었습니다
+- 스택 공간에서 스레드를 구분해서 사용하고 코드, 데이터, 힙 공간을 공유함으로서 효율적으로 하나의 프로세스 작업을 수행합니다. 이를 통해 Context Switch 횟수도 최소화할 수 있습니다.
+
+#
+
+#### 13. Task란 무엇인가요?
+
+- Task란 Thread가 동료 Thread와 공유하는 부분을  말합니다
+- 이러한 Task에는 코드, 데이터, 힙, OS resource가 있습니다.
+
+#
+
+#### 14. Thread 의 장점을 설명해주세요
+
+- 다중스레드로 구성된 경우 하나의 서버스레드가 blocked 상태더라도 동일한 task내의 다른 스레드가 running되어 빠른 처리가 가능해집니다
+- 동일한 일을 수행하는 다중스레드가 협력하여 높은 처리율(throughput)을 달성합니다
+- 스레드를 사용하면 병렬성을 높일 수 있습니다.
+- (프로세스를 하나 만드는 것보다 스레드 하나를 만드는 것보다 30배의 시간이 걸립니다)
+- (프로세스의 문맥전환과 스레드 전환의 시간차이는 5배가 납니다)
+
+
 
 
 
