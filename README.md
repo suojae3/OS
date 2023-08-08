@@ -8,8 +8,7 @@
 - [운영체제 개요](#운영체제-개요)
 - [컴퓨터 시스템의 구조](#컴퓨터-시스템의-구조)
 - [프로세스 관리](#프로세스-관리)
-
-
+- [CPU 스케쥴링](#cpu-스케쥴링)
 
 
 <br/>
@@ -211,7 +210,7 @@
 
 #
 
-#### 03. 컴퓨터 시스템에서 mode bit이 하는 역할은 무엇인가요? 
+### 03. 컴퓨터 시스템에서 mode bit이 하는 역할은 무엇인가요? 
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="18.png" width="400" height="200">
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="19.png" width="400" height="200"><br/>
@@ -225,7 +224,7 @@
 
 #
 
-#### 04. 컴퓨터 시스템에서 intterupt line 이 하는 일은 무엇인가요?
+### 04. 컴퓨터 시스템에서 intterupt line 이 하는 일은 무엇인가요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="20.png" width="400" height="200"><br/>
 
@@ -235,7 +234,7 @@
 
 #
 
-#### 05. PC(Program Counter) Register 의 역할은 무엇인가요?
+### 05. PC(Program Counter) Register 의 역할은 무엇인가요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="21.png" width="400" height="200"><br/>
 
@@ -243,7 +242,7 @@
 
 #
 
-#### 06. timer 의 역할은 무엇인가요?
+### 06. timer 의 역할은 무엇인가요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="18.png" width="400" height="200"><br/>
 
@@ -254,7 +253,7 @@
 
 #
 
-#### 07. System Call 이란 무엇인가요?
+### 07. System Call 이란 무엇인가요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="22.png" width="400" height="200"><br/>
 
@@ -264,7 +263,7 @@
 
 #
 
-#### 08. Trap 이란 무엇인가요?
+### 08. Trap 이란 무엇인가요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="23.png" width="400" height="200"><br/>
 
@@ -273,7 +272,7 @@
 
 #
 
-#### 09. I/O 이 동작하는 순서를 알려주세요
+### 09. I/O 이 동작하는 순서를 알려주세요
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="18.png" width="400" height="200"><br/>
 
@@ -285,14 +284,14 @@
 
 #
 
-#### 10. device driver 와 firmware의 차이는 무엇인가요?
+### 10. device driver 와 firmware의 차이는 무엇인가요?
 
 - device driver 는 CPU가 device controller 에게 작업을 부탁하는 용도로 사용되는 소프트웨어입니다, 즉 컴퓨터 내부에서 CPU가 수행하는 코드입니다.
 - firmware는 디바이스에서 실행되는 자체적으로 내장된 코드로 Disk나 I/O 디바이스에 read/write하는 코드입니다
 
 #
 
-#### 11. 동기식 입출력 (synschronous I/O)과 비동기식 입출력 (asynschronous I/O) 에 대해서 설명해주세요
+### 11. 동기식 입출력 (synschronous I/O)과 비동기식 입출력 (asynschronous I/O) 에 대해서 설명해주세요
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="24.png" width="400" height="200"><br/>
 
@@ -304,7 +303,7 @@
 
 #
 
-#### 12. DMA(direct memory access) Controller 란 무엇인가요?
+### 12. DMA(direct memory access) Controller 란 무엇인가요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="25.png" width="400" height="200">
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="26.png" width="400" height="200"><br/>
@@ -315,7 +314,7 @@
 
 #
 
-#### 13. I/O를 수행하는 기계어 2가지에 대해 설명해주세요
+### 13. I/O를 수행하는 기계어 2가지에 대해 설명해주세요
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="27.png" width="400" height="200"><br/>
 
@@ -324,7 +323,7 @@
 
 #
 
-#### 14. Caching 이란 무엇인가요?
+### 14. Caching 이란 무엇인가요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="28.png" width="400" height="200"><br/>
 
@@ -342,7 +341,7 @@
 
 <br/>
 
-#### 1. 커널과 Virtual 메모리 주소 공간은 어떻게 구성되어 있나요?
+### 1. 커널과 Virtual 메모리 주소 공간은 어떻게 구성되어 있나요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/29.png" width="400" height="200"><br/>
 
@@ -354,7 +353,7 @@
 
 #
 
-#### 2. 사용자 프로그램이 사용하는 함수는 어떤 종류로 나뉘나요?
+### 2. 사용자 프로그램이 사용하는 함수는 어떤 종류로 나뉘나요?
 
 - 사용자 프로그램이 사용하는 함수는 사용자 정의 함수, 라이브러리 함수, 커널 함수 3가지 입니다.
 - 사용자 정의 함수는 자신의 프로그램에서 정의한 함수(ex. 개발자가 정의한 함수)입니다.
@@ -363,7 +362,7 @@
 
 #
 
-#### 3. 한 프로그램의 실행 과정을 설명해주세요
+### 3. 한 프로그램의 실행 과정을 설명해주세요
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/30.png" width="400" height="200"><br/>
 
@@ -374,7 +373,7 @@
 
 #
 
-#### 4. 프로세스의 문맥(Context)란 무엇인가요?
+### 4. 프로세스의 문맥(Context)란 무엇인가요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/31.png" width="400" height="200"><br/>
 
@@ -385,7 +384,7 @@
 
 #
 
-#### 5. Running, Ready, Blocked(wait, sleep) 상태에 있다는 말은 어떤 뜻인가요?
+### 5. Running, Ready, Blocked(wait, sleep) 상태에 있다는 말은 어떤 뜻인가요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/32.png" width="400" height="200"><br/>
 
@@ -396,7 +395,7 @@
 
 #
 
-#### 6. 프로세스 상태(state)에 대해 설명해주세요
+### 6. 프로세스 상태(state)에 대해 설명해주세요
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/33.png" width="400" height="200"><br/>
 
@@ -409,7 +408,7 @@
 
 # 
 
-#### 7. Process Control Block(PCB)에 대해 설명해주세요
+### 7. Process Control Block(PCB)에 대해 설명해주세요
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/34.png" width="400" height="200"><br/>
 
@@ -418,7 +417,7 @@
 
 #
 
-#### 7. 문맥교환(Context SwitCh)이란 무엇인가요?
+### 7. 문맥교환(Context SwitCh)이란 무엇인가요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/35.png" width="400" height="200"><br/>
 
@@ -429,7 +428,7 @@
 
 #
 
-#### 8. system call이나 interrupt 발생시 항상 Context Switch가 일어나나요?
+### 8. system call이나 interrupt 발생시 항상 Context Switch가 일어나나요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/36.png" width="400" height="200"><br/>
 
@@ -438,7 +437,7 @@
 
 #
 
-#### 9. 스케줄러(Scheduler)에 대해서 설명해주세요
+### 9. 스케줄러(Scheduler)에 대해서 설명해주세요
 
 - 스케쥴러에는 3가지 종류가 있습니다 (장기 스케쥴러 / 단기 스케쥴러 / 중기 스케쥴러)
 - 장기 스케쥴러는 프로세스 중 어떤 것들을 ready queue로 보낼지 결정합니다. 즉 프로세스에 memory를 주는 문제를 관리합니다. 하지만 time sharing system(요즘 쓰이는 리눅스 윈도우 등등)들은 장기 스케쥴러가 없이 이미 프로세스가 메모리에 올라온채로 시작합니다.
@@ -448,14 +447,14 @@
 
 #
 
-#### 10. 프로세스의 상태중 Blocked 와 Suspended 의 차이를 알려주세요
+### 10. 프로세스의 상태중 Blocked 와 Suspended 의 차이를 알려주세요
 
 - 둘 모두 CPU를 얻을 수 없는 프로세스 상태입니다.
 - 하지만 Blocked는 내부적인 이유(I/O등의 이벤트 기다림)로, Suspended의 경우 외부적인 이유(메모리 공간 부족으로 프로세스를 디스크로 쫒아냄)로 프로세스 수행이 정지된 상태입니다.
 
 #
 
-#### 11. 디스크 I/O의 interrupt는 하드웨어 interrupt입니까? 소프트웨어 interrupt입니까?
+### 11. 디스크 I/O의 interrupt는 하드웨어 interrupt입니까? 소프트웨어 interrupt입니까?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/37.png" width="400" height="200"><br/>
 
@@ -466,7 +465,7 @@
 
   #
 
-#### 12. Thread 란 무엇인가요?
+### 12. Thread 란 무엇인가요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/38.png" width="400" height="200"><br/>
 
@@ -476,14 +475,14 @@
 
 #
 
-#### 13. Task란 무엇인가요?
+### 13. Task란 무엇인가요?
 
 - Task란 Thread가 동료 Thread와 공유하는 부분을  말합니다
 - 이러한 Task에는 코드, 데이터, 힙, OS resource가 있습니다.
 
 #
 
-#### 14. Thread 의 장점을 설명해주세요
+### 14. Thread 의 장점을 설명해주세요
 
 - 다중스레드로 구성된 경우 하나의 서버스레드가 blocked 상태더라도 동일한 task내의 다른 스레드가 running되어 빠른 처리가 가능해집니다
 - 동일한 일을 수행하는 다중스레드가 협력하여 높은 처리율(throughput)을 달성합니다
@@ -493,7 +492,7 @@
 
 #
 
-#### 15. Kernel thread 에 대해 설명해주세요
+### 15. Kernel thread 에 대해 설명해주세요
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/39.png" width="400" height="200"><br/>
 
@@ -503,7 +502,7 @@
 
 #
 
-#### 16. 프로세스는 어떻게 만들어지나요?
+### 16. 프로세스는 어떻게 만들어지나요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/40.png" width="400" height="200"><br/>
 
@@ -514,7 +513,7 @@
 
 #
 
-#### 17. 프로세스가 만들어진 이후에 실행과정은 어떻게 되나요?
+### 17. 프로세스가 만들어진 이후에 실행과정은 어떻게 되나요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/41.png" width="400" height="200"><br/>
 
@@ -523,7 +522,7 @@
 
 #
 
-#### 18. 프로세스 종료(process termination) 과정은 어떻게 되나요?
+### 18. 프로세스 종료(process termination) 과정은 어떻게 되나요?
 
 - 프로세스가 종료될 때는 운양체제에게 `exit()` 시스템 콜을 통해 종료되었음을 알려줍니다.
 - 자식 프로세스가 종료될 때는 `wait()`을 통해부모 프로세스에게 종료되었음을 알립니다.
@@ -533,7 +532,7 @@
 
 #
 
-#### 19. 부모프로세스와 자식프로세스는 어떻게 구분되나요?
+### 19. 부모프로세스와 자식프로세스는 어떻게 구분되나요?
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="https://www.it.uu.se/education/course/homepage/os/vt18/images/module-2/fork-details.png" width="400" height="200"><br/>
 
@@ -542,7 +541,53 @@
 
 #
 
-#### 20. 
+### 20. 프로세스와 관련된 시스템 콜을 정리해주세요
+
+- 프로세스와 관련된 시스템 콜은 4가지가 있습니다
+- `fork()`: 자식 프로세스를 만들 때 사용합니다
+- `exec()`: 자식 프로세스에 데이터를 덮어씌울 때 사용합니다
+- `wait()`: 자식 프로세스를 종료시킬 때 사용합니다
+- `exit()`: 부모 프로세스를, 전체적인 프로세스를 종료시킬 때 사용합니다
+
+#
+
+### 21. 프로세스 종료에서 자발적 종료와 비자발적 종료에 대해 설명해주세요
+
+- 프로세스 종료에는 두가지 종류, 자발적 종료와 비자발적 종료가 있습니다.
+- 자발적 종료는 말그대로 작업을 다 마치고 자연스럽게 종료되는 종료입니다.
+- 자발적 종료는 마지막 statement 수행후 exit() 시스템 콜이 실행됩니다. 이때 개발자가 굳이 적지 않더라도 컴파일러가 자동적으로 `main()`함수가 리턴되는 위치에 넣어줍니다.
+- 비자발적 종료는 키보드로 kill, break등을 쳐서 부모 프로세스나 자식프로세스를 강제종료시키는 경우입니다.
+- 이러한 경우의 특징은 자식프로세스가 메모리 한계치를 넘어서거나 자식 프로세스 할 일이 더이상 필요하지 않는 경우가 있으며 부모 프로세스를 강제종료 시킬경우 자식 프로세스를 먼저 죽이고 부모 프로세스를 죽이는 단계적인 종료절차가 진행됩니다.
+
+<br/>
+
+ ---
+
+## CPU 스케쥴링
+
+<br/>
+
+### 01. 프로세스 간 협력은 어떻게 이루어지나요?
+
+- 평소에는 프로세스는 CPU와 메모리를 두고 경쟁을 하게 됩니다.
+- 또한 프로세스는 메모리 공간이 독립적이라 다른 프로세스의 메모리를 들여다볼 수 없습니다.
+- 하지만 경우에 따라 프로세스끼리 협력해야하는 상황이 있습니다. 이러한 협력 방법은 크게 두 가지 종류가 있습니다 - 메세지 전달 방법 / 주소 공간 공유 방법
+
+#
+
+### 02. 메세지 전달 방법에 대해 설명해주세요
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/42.png" width="400" height="200">
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/43.png" width="400" height="200"><br/>
+
+- P라는 프로세스와 Q라는 프로세스는 메세지를 매개로 협력하게 됩니다
+- 하지만 서로다른 프로세스끼리 메세지를 직접 보낼 수 없기 때문에 kernel(운영체제)를 중간에 한 번 거쳐서 보내게됩니다.(시스템 콜)
+- 메세지 패싱 방법은 목적지를 명시하는 Direct Communication과 누구한테 전달하지는 모르지만 메일박스or포트m에다 메세지를 넣고 먼저 메일박스를 열게되는 프로세스와 공유하는 방법인 Indirect Communication이 있습니다.
+
+#
+
+### 03. 주소 공간을 공유하는 방법에 대해 설명해주세요
+
 
 
 
