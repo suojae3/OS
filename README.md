@@ -592,6 +592,101 @@
 
 - 원칙적으로는 프로세스는 각자의 데이터공간을 가지고 있어 분리되어 있습니다
 - 하지만 이렇게 메모리 공간을 공유하는 경우 운영체제에게 시스템 콜을 요청해서 공통된 메모리 공간을 공유합니다
+#
+
+### 04.CPU burst 와 I/O burst에 대해 설명해주세요
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/44.png" width="400" height="200"><br/>
+
+- CPU burst는 CPU가 기계어를 해석하고 있는 단계, I/O하는 단계를 I/O burst라고 부릅니다
+- 프로그램별로 burst의 간격은 다릅니다. 주로 사람과 ineract하는 프로그램이 사진처럼 버스트가 번갈아 등장하게 됩니다. 연산량을 많이 필요로하는 작업은 CPU Burst의 간격이 넓어지게 됩니다.
+- 이러한 I/O를 길게 쓰는 프로그램을 I/O bound job(process), CPU를 길게 쓰는 프로그램을 CPU bound job(process)이라고 부릅니다.
+- 
+
+#
+
+### 05. Burst time에 따라 CPU 우선권은 어떻게 달라지나요?
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/45.png" width="400" height="200"><br/>
+
+- I/O bound job 과 CPU bound job 중 운영체제는 I/O bound job에게 먼저 CPU 사용 우선권을 주게됩니다.
+- I/O bound job 에게 CPU를 먼저 할당해야 오래걸리는 I/O 작업을 하러 떠남으로서 더 효율적으로 프로세스 관리가 이루어지게 되기 때문입니다.
+- 또한 I/O bound job은 사람과 interaction 하는 작업이기 때문에 최대한 먼저 결과물을 전달해주어야 합니다.
+
+#
+
+### 06. CPU scheduler 와 Dispathcer는 무엇인가요?
+
+- 운영체제의 코드중 일부코드입니다.
+- CPU 스케쥴러 코드는 Reay상태 프로세스 중에 CPU를 할당해줄 프로세스를 고릅니다.
+- Dispatcher 코드는 CPU의 제어권을 CPU 스케쥴러에 의해 선택된 프로세스에게 넘깁니다. 이러한 과정을 문맥 교환이라고도 부릅니다.
+
+#
+
+### 07. Process의 상태변화에 대해서 설명해주세요
+
+- CPU 스케줄링이 필요한 경우는 다음과 같은 상태변화가 있습니다.
+1. Running -> Blocked (예: I/O 요청하는 시스템 콜)
+2. Running -> Ready (예: 할당시간 만료로 timer inerrupt)
+3. Blocked -> Ready (예: I/O 완료후 인터럽트)
+4. Terminated
+- 1~4 스케쥴링은 강제로 빼앗지 않고 자진 CPU 제어권을 반납하는 **nonpreemptive** scheduling
+- 1~4 에 해당하지 않는 모든 스케쥴링은 강제로 빼았는 **preemptive** scheduling
+
+# 
+
+### 08. CPU 성능 척도(performance index)에 있어 기준이 무엇인지 설명해주세요
+
+- CPU 성능 척도의 기준은 5가지입니다. 1,2은 시스템의 입장, 3,4,5는 클라이언트의 입장이라 볼 수 있습니다.
+1. CPU 이용률 (CPU utilization)
+2. 처리량 (Throughput)
+3. 소요시간, 반환시간 (Turnaround time)
+4. 대기시간 (Waiting time)
+5. 응답시간 (Repsonse time)
+
+#
+
+### 09. 스케쥴링 알고리즘 중 FCFS(Fisrt-Come Fisrt-Served) 에 대해 설명해주세요
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/46.png" width="400" height="200"><br/>
+
+- FCFS는 먼저 도착한 프로세스에게 가장 먼저 CPU 제어권을 줍니다.
+- 이러한 선착순대로 처리하는 방법(FCFS)는 non-preemptive한 스케쥴링입니다.
+- 하지만 만약 앞선 프로세스의 작업량이 많고 뒤이은 프로세스의 작업량이 적은 경우 매우 비효율적인 스케쥴링이 될 수 있습니다
+- 이러한 FCFS처럼 순서에 따라 성능차이가 나는 것을 **Convoy effect**라고 부릅니다
+
+#
+
+### 10. 스케쥴링 알고리즘 중 SJF(Shortest-Job-Fisrt)에 대해 설명해주세요
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/47.png" width="400" height="200"><br/>
+
+- SJF는 짧은 작업량을 먼저 처리할 수 있도록 CPU 제어권을 넘기는 알고리즘으로 Convoy effect를 고려한 방법이라고 할 수 있습니다
+- SJG는 대기시간의 관점에서 보았을 때 가장 최적화된 방법이라고 볼 수 있습니다
+- 만약 한 프로세스에게 CPU 제어권을 넘겼는데 더 짧은 작업량의 프로세스가 온다면 일단 제어권을 가지고 있는 프로세스의 작업 마무리는 기다려 줍니다 -> non-preemptive
+- 만약 대기큐에서 더 짧은 프로세스가 온다면 이 프로세스를 우선순위를 앞에다 둡니다 -> preemptive
+- 가장 최적화된 방법은 preemptive 입니다.
+
+#
+
+### 11. SJF(Shortest-Job-Fisrt)의 단점에 대해서 설명해주세요
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/48.png" width="400" height="200"><br/>
+
+- SJF는 사실상 최적화된 방법임에도 치명적인 두 가지 약점이 있습니다.
+- 가장 먼저 **Starvation** 문제가 있다는 것입니다. 계속해서 작업량이 적은 프로세스가 새치기를 할경우 뒤에있던 프로세스가 영원히 처리되지 않을 수도 있습니다
+- 두번째는 CPU burst time에 대한 파악이 정확하지 않다는 문제입니다. 운영체제는 각 프로세스의 CPU 작업량을 인풋 데이터나 브런치, 과거의 CPU burst(exponential reveraging)등을 종합하여 **추정**할 뿐입니다. 따라서 만약 짧다고 생각해서 CPU 제어권을 넘겼는데 알고보니 CPU작업량을 많이 차지하는 녀석이라면 문제가 될 수 있습니다.
+
+#
+
+### 12. 
+
+
+
+
+
+
+
 
 
 
