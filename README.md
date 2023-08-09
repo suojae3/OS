@@ -679,7 +679,26 @@
 
 #
 
-### 12. 
+### 12. 스케쥴링 알고리즘 중 Priority Scheduling에 대해 설명해주세요
+
+- 우선순위가 높은 프로세스에게 CPU 제어권을 넘깁니다. SJF도 일종의 Priority Scheduling이라고 볼 수 있습니다.
+- 이때 SJF는 Priority를 CPU burst time 예측으로 매깁니다.
+- 따라서 Priority Scheduling 도 **Starvation** 이라는 문제점을 가지고 있습니다
+- Priority Scheduling에서는 Starvation의 문제 해결방안으로 **Aging**을 사용하고 있습니다.
+- **Aging**이란 큐에 머물러있는 시간에 따라 프로세스의 우선순위를 높여주는 방법입니다.
+
+#
+
+### 13. 스케쥴링 알고리즘 중 Round Robin(RR)에 대해 설명해주세요
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/48.png" width="400" height="200"><br/>
+
+- 프로세스에게 CPU를 넘길 때 timer을 사용해서 점유시간을 미리 설정해놓는 방식입니다
+- 일정시간이 지나면 인터럽트가 걸려 운영체제에게 다시 CPU가 넘어갑니다. 이때 할당시간을 **time quantum** 이라 부릅니다
+- 현대 운영체제 프로그램에서 가장 많이 쓰이는 알고리즘입니다.
+- 한 가지 단점은 일반적으로 SJF보다 프로세스당 평균적으로 작업 끝내는 시간이 길어진다는 것입니다.
+- 따라서 RR은 비슷한 동일한 작업들이 있을 때보다 짧은 작업, 긴 작업 섞여있있을 때 써야 효율적입니다.
+
 
 
 
