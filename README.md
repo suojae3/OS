@@ -9,6 +9,7 @@
 - [컴퓨터 시스템의 구조](#컴퓨터-시스템의-구조)
 - [프로세스 관리](#프로세스-관리)
 - [CPU 스케쥴링](#cpu-스케쥴링)
+- [병행제어](#병행제어)
 
 
 <br/>
@@ -702,9 +703,39 @@
 
 
 
+<br/>
 
+ ---
 
+## 병행제어
 
+<br/>
+
+### 01. Multilevel Queue란 무엇인가요?
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/49.png" width="400" height="200"><br/>
+
+- 이전까지의 큐가 한 라인의 큐였다면 Ready queue를 여러개로 분할하는 것을 말합니다
+- Multi level Queue에서는 큐의 종류를 두가지로 나눕니다. -> **foreground** / **background**
+- 이러한 큐를 나누는 기준은 사용자와 ineteract를 하는경우에 foreground 큐에 그렇지 않은 경우에 background 큐에 둡니다
+- forground는 사용자와 interactive하기 때문에 더 많은 CPU time 을 줍니다
+- 보통 Time slice로 RR알고리즘을 사용하여 80%는 foreground, 20%는 FCFS 알고리즘으로 background에 할당하여 starvation을 방지합니다
+
+#
+
+### 02. Hard Real time system 과 Soft real time system 의 차이를 알려주세요
+
+- Hard real time system 의 task는 정해진 시간안에 반드시 끝내도록 스케쥴링 해야합니다
+- Soft real time system 은 정해진 시간에 완수하지 못하더라도 높은 priority의 작업으로 할당해야합니다
+
+#
+
+### 03. Thread scheduling 에 대해 설명해주세요
+
+- Thread scheduling에는 Local Scheduling과 Global scheduling 두 가지 방법이 있습니다.
+- 운영체제가 스레드의 존재 유무를 알고 있다면 커널에 의해 스케쥴링 되는 global scheduling, 운영체제가 해당 스레드의 존재유무를 모른다면 (user level thread) 라면 프로세스 내부에서 스케줄링이 결정되는 local scheduling이 있습니다.
+
+#
 
 
 
