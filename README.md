@@ -726,16 +726,81 @@
 ### 02. Hard Real time system 과 Soft real time system 의 차이를 알려주세요
 
 - Hard real time system 의 task는 정해진 시간안에 반드시 끝내도록 스케쥴링 해야합니다
-- Soft real time system 은 정해진 시간에 완수하지 못하더라도 높은 priority의 작업으로 할당해야합니다
+- Hard real time system 은 데드라인을 지키는 것이 매우 중요하기 때문에 offline 스케쥴링이 많습니다 (offline: 미리 프로세스들이 언제 도착할지 알고있음)
+- Soft real time system 은 정해진 시간에 완수하지 못하더라도 높은 priority의 작업으로 할당해야합니다(동영상 스트리밍 etc)
+- Soft real time system 은 online 스케쥴링으로 됩니다 (프로세스 도착 시간 미리 생각안하고 그때그때 처리)
 
 #
 
-### 03. Thread scheduling 에 대해 설명해주세요
+### 03. Thread 를 구현하는 2가지 방법에 대해서 설명해주세요
 
 - Thread scheduling에는 Local Scheduling과 Global scheduling 두 가지 방법이 있습니다.
 - 운영체제가 스레드의 존재 유무를 알고 있다면 커널에 의해 스케쥴링 되는 global scheduling, 운영체제가 해당 스레드의 존재유무를 모른다면 (user level thread) 라면 프로세스 내부에서 스케줄링이 결정되는 local scheduling이 있습니다.
 
+# 
+
+### 04. 어떤 CPU 스케쥴링이 좋은 알고리즘인지 어떻게 평가할까요?
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/50.png" width="400" height="200"><br/>
+
+- 크게 3가지 방법이 있습니다 (**Queueing models**, **Implementation(구현)&Measurement(성능측정)**, **Simulation(모의 실험)**)
+- Queueing models: Arrival rate(도착율-얼마나 빠른 빈도로 CPU를 쓰겠다고 도착하느냐)와 Service rate(처리율-단위시간당 얼마나 많은 작업을 처리하느냐) 두 가지를 이용해서 평가합니다.
+- Implementation(구현)&Measurement(성능측정): 실제로 구현해서 작업 비교를 통해 성능을 측정하는 방법입니다.
+- Simulation(모의 실험): 실제로 구현하는 것이 아닌 가상적으로 돌려보는 방법입니다. trace(주어진 작업)를 모의프로그램으로 돌려보는 방법이라고 할 수 있습니다.
+
 #
+
+### 05. 컴퓨터가 데이터를 접근하는 순서가 어떻게 되나요
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/51.png" width="400" height="200"><br/>
+
+1. 먼저 데이터가 저장되어 있어야합니다
+2. 저장된 데이터 중 연산할 데이터를 읽어옵니다.
+3. 데이터를 연산합니다
+4. 연산결과를 다시 데이터에 저장합니다
+   
+#
+
+### 06. Race condition(경쟁 상황)이란 어떤 상황을 이야기하나요?
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/52.png" width="400" height="200"><br/>
+
+- 만약 읽어가는 연산이 2개 이상 있을 경우 Race Condition의 가능성이 있습니다
+- 이때 Race condition이란 한쪽이 1을 더하는 연산, 한쪽이 1을 빼는 연산을 할 때 둘의 순서에 따라 저장값에 차이가 납니다.
+- 이러한 S-box(memory address space)를 두고 여러 E-Box(CPU process)가 경쟁하는 상황을 Race Condition이라 부릅니다
+
+#
+
+### 07. 경쟁상황은 CPU가 2개 이상이여만 생기나요?
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/53.png" width="400" height="200"><br/>
+
+- 그렇지 않습니다. CPU가 1개일 때도 경쟁상황이 나타날 수 있습니다.
+- 한 프로세스가 CPU를 가지고 일을 하다 운영체제에게 시스템 콜을 합니다. 이렇게 운영체제 안의 데이터값을 바꾸고 있을 때 자신의 CPU할당시간이 끝나버려 다음 프로세스에게 넘어갑니다.
+- 이 때 다음 프로세스도 시스템 콜을 하게되면서 그전의 프로세스가 날린 시스템 콜이 건드리는 커널의 데이터와 겹치게 되면 경쟁상황이 발생합니다.
+- 즉 프로세스에 의해서도 경쟁상황이 발생합니다
+
+#
+
+### 08. 어떻게 Race condition(경쟁상황)을 해소할 수 있을까요?
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/54.png" width="400" height="200"><br/>
+
+- 시스템 콜을 하여 커널모드에서 수행 중일 때는 CPU를 사용하지 않는 것입니다.
+- 즉 커널 모드에서는 CPU를 preempt(점유)하지 않고 커널 모드에서 사용자모드로 돌아갈 때 다시 preempt 합니다.
+
+#
+
+### 09. Process Synchronization 문제란 무엇인가요?
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/55.png" width="400" height="200"><br/>
+
+- 공유 데이터(shared data)의 동시접근(concurrent access)할 때 생기는 문제로 데이터 불일치 문제(inconsistency)입니다.
+- 이를 방지하기 위해, 다시말해 일관성(consistency) 유지를 ㅜ이해 협력 프로세스(Cooperating process)간의 실행 순서(orderly execution)를 정해주는 매커니즘이 필요합니다.
+- 이러한 겹쳐서 이용되는 구간(Critical section)에 하나의 프로세스가 있을 때 모든 프로세스를 막는 방법(lock)으로 문제를 보완할 수 있습니다.
+
+
+### 3-5 강부터
 
 
 
