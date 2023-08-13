@@ -857,5 +857,10 @@
 - 일반적으로 Block/WakeUp이 더 효율적입니다. Busy-Wait 방식은 대기를 하는 프로세스가 CPU에서 계속 동작하고 있기 때문입니다.
 - 하지만 Critical Section의 길이가 매우 짧은 경우 WakeUp도 일종의 오버헤드이기 때문에 busy-wait가 좀더 효율적일 수 있습니다.
 
+#
 
+### 16. Mutex(Binary semaphor)와 Counting semaphore의 차이를 알려주세요
+
+- 전자는 세마포 변수값이 0 또는 1만 가지고 후자는 세마포 변수값이 0이상의 임의의 정수값을 가집니다.
+- 전자의 경우 mutual exclusion(락걸고 풀기)에 사용되고 후자의 경우 resource counting에 사용됩니다.
 
