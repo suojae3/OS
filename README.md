@@ -859,7 +859,7 @@
 
 #
 
-### 16. Mutex(Binary semaphor)와 Counting semaphore의 차이를 알려주세요
+### 16. Mutex(Binary semaphore)와 Counting semaphore의 차이를 알려주세요
 
 - 전자는 세마포 변수값이 0 또는 1만 가지고 후자는 세마포 변수값이 0이상의 임의의 정수값을 가집니다.
 - 전자의 경우 mutual exclusion(락걸고 풀기)에 사용되고 후자의 경우 resource counting에 사용됩니다.
