@@ -852,7 +852,10 @@
 
 #
 
-### 15. 
+### 15. Busy-Wait 와 Block/WakeUp 중 어떤 세마포 구현 방법이 더좋은지 알려주세요
+
+- 일반적으로 Block/WakeUp이 더 효율적입니다. Busy-Wait 방식은 대기를 하는 프로세스가 CPU에서 계속 동작하고 있기 때문입니다.
+- 하지만 Critical Section의 길이가 매우 짧은 경우 WakeUp도 일종의 오버헤드이기 때문에 busy-wait가 좀더 효율적일 수 있습니다.
 
 
 
