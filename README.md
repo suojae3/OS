@@ -864,3 +864,13 @@
 - 전자는 세마포 변수값이 0 또는 1만 가지고 후자는 세마포 변수값이 0이상의 임의의 정수값을 가집니다.
 - 전자의 경우 mutual exclusion(락걸고 풀기)에 사용되고 후자의 경우 resource counting에 사용됩니다.
 
+#
+
+### 17. Bounded Buffer Problem(Producer-Consumer Problem) 이란 무엇인가요?
+
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/60.png" width="400" height="200"><br/>
+
+- 공유데이터를 쓰는 Buffer에서 경쟁상황이 생기는 문제입니다.
+- 공유데이터 버퍼에는 두가지 프로세스가 있습니다 (Producer 와 Consumer)
+
+
