@@ -871,6 +871,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="pic/60.png" width="400" height="200"><br/>
 
 - 공유데이터를 쓰는 Buffer에서 경쟁상황이 생기는 문제입니다.
-- 공유데이터 버퍼에는 두가지 프로세스가 있습니다 (Producer 와 Consumer)
+- 공유데이터 버퍼에는 두가지 프로세스가 있습니다 (Producer-생산자 프로세스 와 Consumer-소비자 프로세스)
+- 만약 Producer가 버퍼를 채우고 있을 때 다른 Producer에게 CPU를 빼앗기면 똑같은 빈 버퍼에 데이터가 중복되어 저장되어 유실되는 문제가 있습니다. 이러한 비슷한 상황이 Consumer에서도 발생합니다.
+- 이러한 Bounded Buffer Problem을 방지하기 위해 lock을 거는 방법이 있습니다.
 
+#
+
+### 18. Readers-Writer Problem 이란 무엇인가요?
+
+- 주로 DB에서 발생하는 문제로 한 프로세스가 Write 중일 때 다른 프로세스가 접근하는 경우 생기는 문제입니다. (read는 동시에 여럿이 해도 문제 x)
+- 이를 해결하기 위해서는 Writer가 진입할 때는 대기 중인 Reader가 없을 때만 허용하고 Writer가 빠져나가야만 Reader의 접근을 허용합니다
+- 이때 Writer가 일찍 도착했음에도 Reader가 계속와서 틈을 주지 않으면 Starvation 문제가 발생할 수 있습니다.
+- 
 
